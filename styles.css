@@ -629,3 +629,134 @@ footer{
     font-size:27px;
   }
 }
+/* =========================
+   SLIGHTLY LARGER MOBILE
+   HEADER + FOOTER
+   ========================= */
+
+@media(max-width:720px){
+
+  /* HEADER */
+  .hero-inner{
+    min-height:170px;
+    gap:15px;
+  }
+
+  .brand-mark{
+    width:88px;
+    flex:0 0 88px;
+  }
+
+  .eyebrow{
+    font-size:8px;
+    letter-spacing:.17em;
+    margin-bottom:7px;
+  }
+
+  h1{
+    font-size:clamp(32px,9vw,42px);
+    letter-spacing:.035em;
+  }
+
+  .tagline{
+    gap:7px;
+    margin-top:11px;
+    font-size:8px;
+    letter-spacing:.14em;
+  }
+
+
+  /* FOOTER / CLOSING */
+  .closing{
+    margin-top:48px;
+    padding:28px 8px;
+    gap:25px;
+  }
+
+  .closing-brand div{
+    font-size:12px;
+    letter-spacing:.24em;
+  }
+
+  .closing-brand strong{
+    font-size:27px;
+    letter-spacing:.10em;
+  }
+
+  .quote{
+    font-size:14px;
+    line-height:1.55;
+    padding:0 8px;
+  }
+
+  .vvit strong{
+    font-size:35px;
+    letter-spacing:.12em;
+  }
+
+  .vvit span{
+    font-size:7px;
+    letter-spacing:.15em;
+  }
+
+  footer{
+    padding:0 10px 27px;
+    font-size:8px;
+    letter-spacing:.15em;
+  }
+}
+
+
+/* SMALL PHONES */
+@media(max-width:390px){
+
+  .hero-inner{
+    min-height:160px;
+    gap:11px;
+  }
+
+  .brand-mark{
+    width:76px;
+    flex:0 0 76px;
+  }
+
+  h1{
+    font-size:30px;
+  }
+
+  .eyebrow{
+    font-size:7px;
+  }
+
+  .tagline{
+    font-size:7px;
+  }
+
+  .closing{
+    padding:25px 6px;
+  }
+
+  .closing-brand div{
+    font-size:11px;
+  }
+
+  .closing-brand strong{
+    font-size:24px;
+  }
+
+  .quote{
+    font-size:13px;
+  }
+
+  .vvit strong{
+    font-size:32px;
+  }
+
+  .vvit span{
+    font-size:6.5px;
+  }
+
+  footer{
+    font-size:7px;
+  }
+}
