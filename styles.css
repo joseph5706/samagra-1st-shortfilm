@@ -915,3 +915,20 @@ footer{
     display:none;
   }
 }
+/* Keep floating particles away from the video */
+
+.film-section{
+  position:relative;
+  z-index:10;
+  isolation:isolate;
+}
+
+.video-shell{
+  position:relative;
+  z-index:11;
+}
+
+.video-shell iframe{
+  position:relative;
+  z-index:12;
+}
