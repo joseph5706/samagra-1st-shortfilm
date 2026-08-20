@@ -747,7 +747,7 @@ footer{
   height:100%;
   pointer-events:none;
   overflow:hidden;
-  z-index:0;
+  z-index:2;
 }
 
 .floating-particles span{
@@ -1012,28 +1012,6 @@ footer{
   text-shadow:0 0 10px rgba(255,215,123,.25);
 }
 
-/* Floating gold glow */
-.about-film::after{
-  content:"✦";
-  position:absolute;
-  right:8%;
-  top:18%;
-  color:rgba(255,215,120,.22);
-  font-size:60px;
-  animation:glowFloat 6s ease-in-out infinite;
-}
-
-@keyframes glowFloat{
-  0%,100%{
-    transform:translateY(0) rotate(0deg);
-    opacity:.2;
-  }
-  50%{
-    transform:translateY(-18px) rotate(12deg);
-    opacity:.55;
-  }
-}
-
 /* Mobile */
 @media (max-width:768px){
 
@@ -1053,4 +1031,111 @@ footer{
   .about-tagline{
     font-size:.9rem;
   }
+}
+/* =========================================
+   FLOATING PARTICLES — BACKGROUND LAYER
+   ========================================= */
+
+.floating-particles{
+  position:fixed;
+  inset:0;
+  width:100%;
+  height:100%;
+  pointer-events:none;
+  overflow:hidden;
+  z-index:1;
+}
+
+
+/* =========================================
+   HEADER
+   Particles visible in background
+   ========================================= */
+
+.hero{
+  position:relative;
+  z-index:2;
+}
+
+
+/* =========================================
+   VIDEO SECTION
+   Particles completely hidden here
+   ========================================= */
+
+.film-section{
+  position:relative;
+  z-index:10;
+  isolation:isolate;
+  background:#050505;
+}
+
+.video-shell{
+  position:relative;
+  z-index:11;
+  background:#000;
+}
+
+.video-shell iframe{
+  position:relative;
+  z-index:12;
+}
+
+
+/* =========================================
+   ABOUT THE FILM
+   Particles visible here
+   ========================================= */
+
+.about-film{
+  position:relative;
+  z-index:2;
+  background:linear-gradient(
+    to bottom,
+    #060606,
+    rgba(13,11,8,.82),
+    #060606
+  );
+}
+
+.about-film::before{
+  z-index:0;
+}
+
+.about-container{
+  position:relative;
+  z-index:3;
+}
+
+
+/* =========================================
+   CAST & CREW
+   Particles hidden behind cards
+   ========================================= */
+
+.cast-grid{
+  position:relative;
+  z-index:10;
+}
+
+.cast-card{
+  position:relative;
+  z-index:11;
+  background:linear-gradient(
+    180deg,
+    #141310,
+    #090908
+  );
+}
+
+
+/* =========================================
+   CLOSING / FOOTER
+   Particles visible again
+   ========================================= */
+
+.closing,
+footer{
+  position:relative;
+  z-index:2;
 }
