@@ -773,3 +773,81 @@ footer{
     flex:0 0 95px;
   }
 }
+/* =========================
+   3 CREW CARDS PER ROW — MOBILE
+   ========================= */
+
+@media(max-width:720px){
+
+  .cast-grid{
+    width:100%;
+    display:grid;
+    grid-template-columns:repeat(3,minmax(0,1fr));
+    gap:7px;
+  }
+
+  .cast-card{
+    width:100%;
+    min-width:0;
+    border-radius:8px;
+  }
+
+  .photo-wrap{
+    width:100%;
+    aspect-ratio:4/4.7;
+  }
+
+  .number{
+    width:21px;
+    height:21px;
+    font-size:8px;
+    margin:5px auto 0;
+  }
+
+  .cast-card h3{
+    font-size:9px;
+    margin:6px 2px 2px;
+    line-height:1.15;
+    min-height:21px;
+    overflow-wrap:anywhere;
+  }
+
+  .cast-card p{
+    font-size:7px;
+    margin:0 2px 6px;
+    line-height:1.2;
+    min-height:17px;
+    overflow-wrap:anywhere;
+  }
+}
+
+
+/* SMALL PHONES */
+
+@media(max-width:390px){
+
+  .cast-grid{
+    grid-template-columns:repeat(3,minmax(0,1fr));
+    gap:5px;
+  }
+
+  .cast-card{
+    border-radius:7px;
+  }
+
+  .number{
+    width:19px;
+    height:19px;
+    font-size:7px;
+  }
+
+  .cast-card h3{
+    font-size:8px;
+    min-height:20px;
+  }
+
+  .cast-card p{
+    font-size:6.5px;
+    min-height:16px;
+  }
+}
