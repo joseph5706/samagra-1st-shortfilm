@@ -936,9 +936,10 @@ footer{
 
 .about-film{
   padding:60px 20px;
-  background:linear-gradient(to bottom,#060606,#0d0b08,#060606);
   position:relative;
   overflow:hidden;
+  background:transparent;
+  z-index:2;
 }
 
 .about-film::before{
@@ -946,16 +947,25 @@ footer{
   position:absolute;
   inset:0;
   background:
-    radial-gradient(circle at top center, rgba(201,161,90,.12), transparent 55%),
-    radial-gradient(circle at bottom right, rgba(201,161,90,.06), transparent 45%);
+    radial-gradient(
+      circle at top center,
+      rgba(201,161,90,.10),
+      transparent 55%
+    ),
+    radial-gradient(
+      circle at bottom right,
+      rgba(201,161,90,.05),
+      transparent 45%
+    );
   pointer-events:none;
+  z-index:0;
 }
 
 .about-container{
   max-width:850px;
   margin:auto;
   position:relative;
-  z-index:2;
+  z-index:3;
   text-align:center;
 }
 
@@ -1090,12 +1100,7 @@ footer{
 .about-film{
   position:relative;
   z-index:2;
-  background:linear-gradient(
-    to bottom,
-    #060606,
-    rgba(13,11,8,.82),
-    #060606
-  );
+  background:transparent;
 }
 
 .about-film::before{
