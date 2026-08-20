@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap');
+
+:root{
+  --bg:#050505;
+  --panel:#0b0b0a;
+  --gold:#c9a15a;
+  --gold-bright:#e1bd76;
+  --cream:#e8d4ac;
+  --muted:#b9ae98;
+  --line:rgba(201,161,90,.55);
+}
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  background:
+    radial-gradient(circle at 50% 8%, rgba(201,161,90,.12), transparent 34%),
+    linear-gradient(180deg,#020202 0%,#090806 45%,#030303 100%);
+  color:#eee;
+  font-family:Inter,Arial,sans-serif;
+  overflow-x:hidden;
+}
+body:before{
+  content:"";
+  position:fixed; inset:0; pointer-events:none; z-index:20;
+  opacity:.045;
+  background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.55'/%3E%3C/svg%3E");
+}
+.ambient{position:fixed;border-radius:50%;filter:blur(100px);pointer-events:none;opacity:.18}
+.ambient-one{width:360px;height:360px;background:#9c6f2f;top:180px;right:-180px}
+.ambient-two{width:300px;height:300px;background:#60451e;bottom:80px;left:-150px}
+
+.hero{
+  border-bottom:1px solid rgba(201,161,90,.38);
+  background:linear-gradient(180deg,rgba(0,0,0,.96),rgba(5,5,5,.88));
+}
+.hero-inner{
+  width:min(1180px,94%);
+  min-height:190px;
+  margin:auto;
+  display:flex;
+  align-items:center;
+  gap:45px;
+}
+.brand-mark{width:190px;flex:0 0 190px}
+.brand-mark img{width:100%;height:auto;display:block;filter:drop-shadow(0 0 15px rgba(201,161,90,.15))}
+.hero-copy{flex:1;text-align:center}
+.eyebrow{
+  color:var(--gold-bright);
+  letter-spacing:.34em;
+  font-size:11px;
+  margin-bottom:9px;
+}
+h1{
+  font-family:Cinzel,serif;
+  font-size:clamp(44px,7vw,86px);
+  letter-spacing:.08em;
+  line-height:.95;
+  margin:0;
+  color:#e8d6b1;
+  text-shadow:0 3px 20px rgba(0,0,0,.9);
+}
+.tagline{
+  display:flex;justify-content:center;align-items:center;gap:15px;
+  margin-top:16px;color:#d6bd91;font-size:12px;letter-spacing:.35em;
+}
+.tagline i{width:4px;height:4px;border-radius:50%;background:var(--gold)}
+
+main{width:min(1180px,94%);margin:auto}
+.film-section{padding:28px 0 46px}
+.section-label{
+  color:#ddd2bc;font-size:15px;letter-spacing:.06em;margin:0 0 12px 3px;
+}
+.video-shell{
+  width:100%;aspect-ratio:16/9;
+  background:#000;border:1px solid rgba(226,203,159,.62);
+  border-radius:17px;overflow:hidden;
+  box-shadow:0 0 0 1px rgba(201,161,90,.08),0 22px 55px rgba(0,0,0,.55),0 0 35px rgba(201,161,90,.08);
+}
+.video-shell iframe{width:100%;height:100%;border:0;display:block}
+.video-note{color:#8f8778;font-size:12px;text-align:right;margin:8px 4px 0}
+
+.section-heading{display:flex;align-items:center;gap:20px;margin:10px 0 28px}
+.section-heading span{height:1px;background:linear-gradient(90deg,transparent,var(--gold));flex:1}
+.section-heading span:last-child{background:linear-gradient(90deg,var(--gold),transparent)}
+.section-heading h2{
+  margin:0;color:#dfc28c;font-family:Cinzel,serif;font-size:clamp(28px,4vw,46px);
+  letter-spacing:.09em;white-space:nowrap;
+}
+.cast-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:13px}
+.cast-card{
+  position:relative;background:linear-gradient(180deg,#141310,#090908);
+  border:1px solid rgba(201,161,90,.52);border-radius:12px;overflow:hidden;
+  min-width:0;transition:transform .25s ease,border-color .25s ease,box-shadow .25s ease;
+}
+.cast-card:hover{transform:translateY(-5px);border-color:#e2bd70;box-shadow:0 15px 35px rgba(0,0,0,.55),0 0 22px rgba(201,161,90,.08)}
+.photo-wrap{aspect-ratio:4/5;background:#151515;overflow:hidden}
+.photo-wrap img{width:100%;height:100%;object-fit:cover;display:block;filter:saturate(.92)}
+.number{
+  width:31px;height:31px;border-radius:50%;display:grid;place-items:center;
+  position:absolute;top:calc(100% - 51px);left:50%;transform:translateX(-50%);
+  background:#d7b36e;color:#16120b;border:2px solid #080706;
+  font-weight:800;font-size:12px;box-shadow:0 2px 9px #000;
+}
+.cast-card h3{
+  font-family:Cinzel,serif;color:#e4c27f;font-size:14px;text-align:center;
+  margin:27px 7px 5px;line-height:1.25;min-height:35px;
+}
+.cast-card p{
+  color:#c4bcad;font-size:10.5px;text-align:center;margin:0 5px 15px;line-height:1.35;min-height:29px;
+}
+
+.closing{
+  margin:58px 0 25px;padding:26px 0;
+  border-top:1px solid rgba(201,161,90,.45);border-bottom:1px solid rgba(201,161,90,.45);
+  display:grid;grid-template-columns:1fr 1.5fr 1fr;align-items:center;gap:30px;
+}
+.closing-brand,.vvit{text-align:center;color:#d7b878;font-family:Cinzel,serif}
+.closing-brand div{font-size:15px;letter-spacing:.35em}
+.closing-brand strong{display:block;font-size:30px;letter-spacing:.13em}
+.quote{text-align:center;color:#d9c9a9;font-family:Cinzel,serif;font-size:16px;line-height:1.55}
+.quote p{margin:0}
+.quote-line{display:block;width:70%;height:1px;margin:0 auto 13px;background:linear-gradient(90deg,transparent,var(--gold),transparent)}
+.quote .quote-line:last-child{margin:13px auto 0}
+.vvit strong{display:block;font-size:44px;letter-spacing:.15em}
+.vvit span{display:block;font-size:9px;letter-spacing:.22em;margin-top:3px}
+
+footer{text-align:center;padding:0 20px 28px;color:#a79370;font-size:9px;letter-spacing:.25em}
+.footer-rule{height:1px;background:linear-gradient(90deg,transparent,rgba(201,161,90,.45),transparent);margin-bottom:20px}
+
+@media(max-width:1000px){
+  .cast-grid{grid-template-columns:repeat(4,1fr)}
+}
+@media(max-width:720px){
+  .hero-inner{min-height:165px;gap:16px}
+  .brand-mark{width:105px;flex-basis:105px}
+  .hero-copy{text-align:left}
+  .eyebrow{font-size:8px;letter-spacing:.2em}
+  h1{font-size:36px;letter-spacing:.04em}
+  .tagline{justify-content:flex-start;gap:7px;font-size:8px;letter-spacing:.18em}
+  .section-heading{gap:10px}
+  .section-heading h2{font-size:25px}
+  .cast-grid{grid-template-columns:repeat(2,1fr);gap:10px}
+  .cast-card h3{font-size:13px}
+  .closing{grid-template-columns:1fr;gap:22px}
+  .quote{order:3}
+  .vvit strong{font-size:38px}
+}
+@media(max-width:390px){
+  .hero-inner{width:96%;gap:10px}
+  .brand-mark{width:85px;flex-basis:85px}
+  h1{font-size:29px}
+  .tagline{font-size:7px}
+  main{width:94%}
+}
