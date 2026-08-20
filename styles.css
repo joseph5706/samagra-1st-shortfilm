@@ -760,3 +760,16 @@ footer{
     font-size:7px;
   }
 }
+@media(max-width:720px){
+  .brand-mark{
+    width:110px;
+    flex:0 0 110px;
+  }
+}
+
+@media(max-width:390px){
+  .brand-mark{
+    width:95px;
+    flex:0 0 95px;
+  }
+}
