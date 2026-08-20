@@ -98,10 +98,23 @@ main{width:min(1180px,94%);margin:auto}
 .photo-wrap{aspect-ratio:4/5;background:#151515;overflow:hidden}
 .photo-wrap img{width:100%;height:100%;object-fit:cover;display:block;filter:saturate(.92)}
 .number{
-  width:31px;height:31px;border-radius:50%;display:grid;place-items:center;
-  position:absolute;top:calc(100% - 51px);left:50%;transform:translateX(-50%);
-  background:#d7b36e;color:#16120b;border:2px solid #080706;
-  font-weight:800;font-size:12px;box-shadow:0 2px 9px #000;
+  width:31px;
+  height:31px;
+  border-radius:50%;
+  display:grid;
+  place-items:center;
+  position:absolute;
+  top:auto;
+  left:50%;
+  bottom:68px;
+  transform:translateX(-50%);
+  background:#d7b36e;
+  color:#16120b;
+  border:2px solid #080706;
+  font-weight:800;
+  font-size:12px;
+  box-shadow:0 2px 9px #000;
+  z-index:2;
 }
 .cast-card h3{
   font-family:Cinzel,serif;color:#e4c27f;font-size:14px;text-align:center;
