@@ -88,15 +88,35 @@ main{width:min(1180px,94%);margin:auto}
   margin:0;color:#dfc28c;font-family:Cinzel,serif;font-size:clamp(28px,4vw,46px);
   letter-spacing:.09em;white-space:nowrap;
 }
-.cast-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:13px}
-.cast-card{
-  position:relative;background:linear-gradient(180deg,#141310,#090908);
-  border:1px solid rgba(201,161,90,.52);border-radius:12px;overflow:hidden;
-  min-width:0;transition:transform .25s ease,border-color .25s ease,box-shadow .25s ease;
+/* =========================
+   CREW CARDS — DESKTOP
+   ========================= */
+
+.cast-grid{
+  display:grid;
+  grid-template-columns:repeat(6,1fr);
+  gap:10px;
 }
-.cast-card:hover{transform:translateY(-5px);border-color:#e2bd70;box-shadow:0 15px 35px rgba(0,0,0,.55),0 0 22px rgba(201,161,90,.08)}
+
+.cast-card{
+  position:relative;
+  background:linear-gradient(180deg,#141310,#090908);
+  border:1px solid rgba(201,161,90,.52);
+  border-radius:10px;
+  overflow:hidden;
+  min-width:0;
+  transition:transform .25s ease,border-color .25s ease,box-shadow .25s ease;
+}
+
+.cast-card:hover{
+  transform:translateY(-4px);
+  border-color:#e2bd70;
+  box-shadow:0 12px 28px rgba(0,0,0,.55),
+             0 0 18px rgba(201,161,90,.08);
+}
+
 .photo-wrap{
-  aspect-ratio:4/5;
+  aspect-ratio:1/1.15;
   background:#151515;
   overflow:hidden;
 }
@@ -109,71 +129,130 @@ main{width:min(1180px,94%);margin:auto}
   display:block;
   filter:saturate(.92);
 }
+
 .number{
-  width:31px;
-  height:31px;
+  width:26px;
+  height:26px;
   border-radius:50%;
   display:grid;
   place-items:center;
   position:static;
-  margin:12px auto 0;
+  margin:8px auto 0;
   transform:none;
   background:#d7b36e;
   color:#16120b;
   border:2px solid #080706;
   font-weight:800;
-  font-size:12px;
-  box-shadow:0 2px 9px #000;
+  font-size:10px;
+  box-shadow:0 2px 7px #000;
   z-index:auto;
 }
+
 .cast-card h3{
-  font-family:Cinzel,serif;color:#e4c27f;font-size:14px;text-align:center;
-  margin:27px 7px 5px;line-height:1.25;min-height:35px;
+  font-family:Cinzel,serif;
+  color:#e4c27f;
+  font-size:12px;
+  text-align:center;
+  margin:10px 5px 3px;
+  line-height:1.2;
+  min-height:29px;
 }
+
 .cast-card p{
-  color:#c4bcad;font-size:10.5px;text-align:center;margin:0 5px 15px;line-height:1.35;min-height:29px;
+  color:#c4bcad;
+  font-size:9px;
+  text-align:center;
+  margin:0 4px 10px;
+  line-height:1.25;
+  min-height:23px;
 }
 
-.closing{
-  margin:58px 0 25px;padding:26px 0;
-  border-top:1px solid rgba(201,161,90,.45);border-bottom:1px solid rgba(201,161,90,.45);
-  display:grid;grid-template-columns:1fr 1.5fr 1fr;align-items:center;gap:30px;
-}
-.closing-brand,.vvit{text-align:center;color:#d7b878;font-family:Cinzel,serif}
-.closing-brand div{font-size:15px;letter-spacing:.35em}
-.closing-brand strong{display:block;font-size:30px;letter-spacing:.13em}
-.quote{text-align:center;color:#d9c9a9;font-family:Cinzel,serif;font-size:16px;line-height:1.55}
-.quote p{margin:0}
-.quote-line{display:block;width:70%;height:1px;margin:0 auto 13px;background:linear-gradient(90deg,transparent,var(--gold),transparent)}
-.quote .quote-line:last-child{margin:13px auto 0}
-.vvit strong{display:block;font-size:44px;letter-spacing:.15em}
-.vvit span{display:block;font-size:9px;letter-spacing:.22em;margin-top:3px}
 
-footer{text-align:center;padding:0 20px 28px;color:#a79370;font-size:9px;letter-spacing:.25em}
-.footer-rule{height:1px;background:linear-gradient(90deg,transparent,rgba(201,161,90,.45),transparent);margin-bottom:20px}
+/* =========================
+   TABLET
+   ========================= */
 
 @media(max-width:1000px){
-  .cast-grid{grid-template-columns:repeat(4,1fr)}
+  .cast-grid{
+    grid-template-columns:repeat(4,1fr);
+    gap:9px;
+  }
 }
+
+
+/* =========================
+   MOBILE
+   ========================= */
+
 @media(max-width:720px){
-  .hero-inner{min-height:165px;gap:16px}
-  .brand-mark{width:105px;flex-basis:105px}
-  .hero-copy{text-align:left}
-  .eyebrow{font-size:8px;letter-spacing:.2em}
-  h1{font-size:36px;letter-spacing:.04em}
-  .tagline{justify-content:flex-start;gap:7px;font-size:8px;letter-spacing:.18em}
-  .section-heading{gap:10px}
-  .section-heading h2{font-size:25px}
-  .cast-grid{grid-template-columns:repeat(2,1fr);gap:10px}
-  .cast-card h3{font-size:13px}
-  .closing{grid-template-columns:1fr;gap:22px}
-  .quote{order:3}
-  .vvit strong{font-size:38px}
+
+  .cast-grid{
+    grid-template-columns:repeat(3,1fr);
+    gap:7px;
+  }
+
+  .cast-card{
+    border-radius:8px;
+  }
+
+  .photo-wrap{
+    aspect-ratio:1/1.15;
+  }
+
+  .number{
+    width:22px;
+    height:22px;
+    font-size:9px;
+    margin:6px auto 0;
+  }
+
+  .cast-card h3{
+    font-size:10px;
+    margin:7px 3px 2px;
+    line-height:1.2;
+    min-height:24px;
+  }
+
+  .cast-card p{
+    font-size:8px;
+    margin:0 3px 7px;
+    line-height:1.25;
+    min-height:19px;
+  }
 }
+
+
+/* =========================
+   SMALL PHONES
+   ========================= */
+
 @media(max-width:390px){
-  .hero-inner{width:96%;gap:10px}
-  .brand-mark{width:85px;flex-basis:85px}
-  h1{font-size:29px}
-  .tagline{font-size:7px}
-  main{width:94%}
+
+  .cast-grid{
+    grid-template-columns:repeat(3,1fr);
+    gap:5px;
+  }
+
+  .cast-card{
+    border-radius:7px;
+  }
+
+  .number{
+    width:20px;
+    height:20px;
+    font-size:8px;
+    margin:5px auto 0;
+  }
+
+  .cast-card h3{
+    font-size:9px;
+    margin:6px 2px 2px;
+    min-height:22px;
+  }
+
+  .cast-card p{
+    font-size:7px;
+    margin:0 2px 6px;
+    min-height:17px;
+  }
 }
