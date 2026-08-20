@@ -96,12 +96,9 @@ main{width:min(1180px,94%);margin:auto}
 }
 .cast-card:hover{transform:translateY(-5px);border-color:#e2bd70;box-shadow:0 15px 35px rgba(0,0,0,.55),0 0 22px rgba(201,161,90,.08)}
 .photo-wrap{
-  aspect-ratio:4/5;
+  aspect-ratio:5/5;
   background:#151515;
   overflow:hidden;
-  display:flex;
-  justify-content:center;
-  align-items:center;
 }
 
 .photo-wrap img{
