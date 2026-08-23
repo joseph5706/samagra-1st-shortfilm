@@ -198,6 +198,34 @@
 
 </div>
     </section>
+    <!-- CAST MEMBER POPUP -->
+<div class="cast-modal" id="castModal">
+  <div class="cast-modal-overlay"></div>
+
+  <div class="cast-modal-box">
+
+    <button class="cast-modal-close" id="castModalClose">&times;</button>
+
+    <div class="cast-modal-photo">
+      <img id="modalPhoto" src="" alt="">
+    </div>
+
+    <div class="cast-modal-content">
+      <div class="modal-small-title">TEAM SAMAGRA</div>
+
+      <h2 id="modalName">Name</h2>
+
+      <div class="modal-role" id="modalRole">Role</div>
+
+      <div class="modal-line"></div>
+
+      <p id="modalAbout">
+        About this team member.
+      </p>
+    </div>
+
+  </div>
+</div>
 
     <section class="closing">
       <div class="closing-brand">
@@ -222,5 +250,53 @@
     <p>A TEAM SAMAGRA ORIGINAL &nbsp; | &nbsp; SHORT FILM &nbsp; | &nbsp; ALL RIGHTS RESERVED © 2026</p>
     <p> Website made by JOSEPH </p>
   </footer>
+  <script>
+const castCards = document.querySelectorAll('.cast-card');
+const castModal = document.getElementById('castModal');
+const castModalClose = document.getElementById('castModalClose');
+
+const modalPhoto = document.getElementById('modalPhoto');
+const modalName = document.getElementById('modalName');
+const modalRole = document.getElementById('modalRole');
+const modalAbout = document.getElementById('modalAbout');
+
+castCards.forEach(card => {
+
+  card.addEventListener('click', () => {
+
+    const image = card.querySelector('.photo-wrap img');
+    const name = card.querySelector('h3');
+    const role = card.querySelector('p');
+    const about = card.dataset.about;
+
+    modalPhoto.src = image.src;
+    modalPhoto.alt = image.alt;
+
+    modalName.textContent = name.textContent;
+    modalRole.textContent = role.textContent;
+    modalAbout.textContent = about;
+
+    castModal.classList.add('active');
+
+    document.body.style.overflow = 'hidden';
+  });
+
+});
+
+function closeCastModal(){
+  castModal.classList.remove('active');
+  document.body.style.overflow = '';
+}
+
+castModalClose.addEventListener('click', closeCastModal);
+
+document.querySelector('.cast-modal-overlay').addEventListener('click', closeCastModal);
+
+document.addEventListener('keydown', (event) => {
+  if(event.key === 'Escape'){
+    closeCastModal();
+  }
+});
+</script>
 </body>
 </html>
