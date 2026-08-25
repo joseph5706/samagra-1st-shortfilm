@@ -301,8 +301,44 @@ document.addEventListener('keydown', (event) => {
 });
 </script>
   <script>
-document.addEventListener('contextmenu', function (e) {
+/* RIGHT CLICK */
+document.addEventListener("contextmenu", function(e) {
     e.preventDefault();
+    alert("🚫 You are not allowed to right click.");
+});
+
+/* INSPECT SHORTCUTS */
+document.addEventListener("keydown", function(e) {
+
+    // Ctrl + I
+    if (e.ctrlKey && e.key.toLowerCase() === "i") {
+        e.preventDefault();
+        alert("🚫 You can't inspect this page.");
+    }
+
+    // F12
+    if (e.key === "F12") {
+        e.preventDefault();
+        alert("🚫 You can't inspect this page.");
+    }
+
+    // Ctrl + Shift + I
+    if (e.ctrlKey && e.shiftKey && e.key.toLowerCase() === "i") {
+        e.preventDefault();
+        alert("🚫 You can't inspect this page.");
+    }
+
+    // Ctrl + Shift + J
+    if (e.ctrlKey && e.shiftKey && e.key.toLowerCase() === "j") {
+        e.preventDefault();
+        alert("🚫 You can't inspect this page.");
+    }
+
+    // Ctrl + U
+    if (e.ctrlKey && e.key.toLowerCase() === "u") {
+        e.preventDefault();
+        alert("🚫 You can't view the source of this page.");
+    }
 });
 </script>
 </body>
